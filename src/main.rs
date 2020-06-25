@@ -9,6 +9,7 @@ fn index() -> Html<&'static str> {
 <html>
     <head>
         <title>Home</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>Welcome</h1>
@@ -20,8 +21,15 @@ fn index() -> Html<&'static str> {
 }
 
 
+#[get("/addit/<number>")]
+fn addit(number: i32) -> String {
+    let new_number = number + 100;
+    format!("You entered {}, We added 100, new number is {}", number, new_number)
+}
+
+
 fn main() {
     rocket::ignite()
-        .mount("/", routes![index]) // Mounting the handlers
+        .mount("/", routes![index, addit]) // Mounting the handlers
         .launch();
 }
