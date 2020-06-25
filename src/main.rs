@@ -23,6 +23,8 @@ fn index() -> Html<&'static str> { //Returning an html page
         <p>This is a rocket practise</p>
         <p>Please Go to the '/addit/{number}'</p>
         <p>You can input any number inside the uri</p>
+        <h2>Or (Bonus Task)</h2>
+        <p>You can click <a href="/form">here</a> to go to the user api</p>
     </body>
 </html>"#)
 }
@@ -48,6 +50,7 @@ fn form() -> Html<&'static str> {
         <title>Post</title>
     </head>
     <body>
+        <h1>POST request</h1>
         <h1>Type a number that you want to add to 100</h1>
         <br>
         <form method="POST" action="/addit">
