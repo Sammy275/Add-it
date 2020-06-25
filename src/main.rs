@@ -13,7 +13,7 @@ fn index() -> Html<&'static str> { //Returning an html page
     <body>
         <h1>Welcome</h1>
         <p>This is a rocket practise</p>
-        <p>Please Go to the '/add/{number}'</p>
+        <p>Please Go to the '/addit/{number}'</p>
         <p>You can input any number inside the uri</p>
     </body>
 </html>"#)
