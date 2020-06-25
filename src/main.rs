@@ -9,7 +9,6 @@ fn index() -> Html<&'static str> { //Returning an html page
 <html>
     <head>
         <title>Home</title>
-        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>Welcome</h1>
